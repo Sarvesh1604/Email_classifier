@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Emails{% endblock %}
+
+{% block content %}
+<h2>Add Emails</h2>
+<form enctype="multipart/form-data" action="." method="POST">
+  {% csrf_token %}
+  {{ form.as_p }} 
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

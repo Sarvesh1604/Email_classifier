@@ -1,0 +1,104 @@
+Delivered-To: sarvesh1604@gmail.com
+Received: by 2002:a05:6214:241:0:0:0:0 with SMTP id k1csp728052qvt;
+        Tue, 10 Aug 2021 23:22:33 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxk1kgVFoORNTLNVn/i7YLMsc3b6ImRxW4I8G2QqBOZCqrVPg8oNRtPICaquqNyozOIcizc
+X-Received: by 2002:a05:6a00:22cc:b029:3dd:8cca:96f1 with SMTP id f12-20020a056a0022ccb02903dd8cca96f1mr2911292pfj.19.1628662953721;
+        Tue, 10 Aug 2021 23:22:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628662953; cv=none;
+        d=google.com; s=arc-20160816;
+        b=jZg064poXxH3hD76kkv3CsV7Lxh2ifeJLbKcbC8cr461inIhcwMHJTlLSd+fAbmGEb
+         Zi02s5KQ+LvOMFilq2q5rkiazsSA67iFV/SOD/kPY/YSSfQHdy8az4HrGU2GrYXwxI3e
+         dFj1c0qq/I+GYV7Vc3irLnL3pF3xQ9pTWOoJ/7/z+s5kznJDcz/mLO73OdVz2OjwScRm
+         tP/ic2/QJVgfFucIuUWV+9QC7dmiQ46tDeNOxiPhIWGvZjOD8rYIl+Y5H85yyxdtg/nX
+         IgmD7z/GaeVMIg22C2t0gPs2c5MKakbDQckMeVG1Lu/Sw/c0wOEE2z8BMKFN77gN7Mlp
+         725A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date;
+        bh=rFS1fbVLatfrDIDCghbjSDwVT6piCsjccAfkFyZqqrE=;
+        b=rgBvOsgLhoVlhv76dIRTQ0XrqIO7h1Dto3b2Hu+5DHvxP1dq5SDblEgWsH55IsscLx
+         DPEjuMVzQatGnoPV7/4m7lWf83CdKdnWXiEWoF3j8iBW1YcEYIGx5E51k8hqoj739wbE
+         zy+XpFzSay7nYqEv27PS7XT/xU1f9fv3YA2XugFRL4q9gfK6mhGWllhZsxQr7APq3IeY
+         Z5tXeG4Vhv+VtYfZEnPF3QixOEs4YVPHmkhmDCcInD7PJVGYMgIaZd6AVEbXDqWh8C86
+         L2yMeVLDhdtiZ1smMlhtkJtUAlT5Khp9lYcMBNtkrBI7KmPW0oALYgsu0/r40BIuBw66
+         MAqw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of kumar@mech.iitkgp.ac.in designates 203.110.245.101 as permitted sender) smtp.mailfrom=kumar@mech.iitkgp.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitkgp.ac.in
+Return-Path: <kumar@mech.iitkgp.ac.in>
+Received: from imsvaou1.iitkgp.ac.in (imsvaou1.iitkgp.ac.in. [203.110.245.101])
+        by mx.google.com with ESMTPS id c8si27873075plr.366.2021.08.10.23.22.32
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 10 Aug 2021 23:22:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kumar@mech.iitkgp.ac.in designates 203.110.245.101 as permitted sender) client-ip=203.110.245.101;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of kumar@mech.iitkgp.ac.in designates 203.110.245.101 as permitted sender) smtp.mailfrom=kumar@mech.iitkgp.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitkgp.ac.in
+Received: from imsvaou1.iitkgp.ac.in (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id A9768DA0E5;
+	Wed, 11 Aug 2021 11:56:15 +0530 (IST)
+Received: from imsvaou1.iitkgp.ac.in (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id 85A9BDA0E4;
+	Wed, 11 Aug 2021 11:56:15 +0530 (IST)
+Received: from P-APP2 (unknown [10.57.7.45])
+	by imsvaou1.iitkgp.ac.in (Postfix) with ESMTP;
+	Wed, 11 Aug 2021 11:56:15 +0530 (IST)
+Date: Wed, 11 Aug 2021 11:52:30 +0530 (IST)
+From: kumar@mech.iitkgp.ac.in
+To: sarvesh1604@gmail.com, sarvesh1604@iitkgp.ac.in, 
+	satyampandey135bnsd@gmail.com, satyampandey135@iitkgp.ac.in, 
+	sayanlayek5@gmail.com, sayanlayek5@iitkgp.ac.in, 
+	selvamathuvappan@gmail.com, selvamathuvappan@iitkgp.ac.in, 
+	NEEL_99@IITKGP.AC.IN, neelshahiitkgp@gmail.com, 
+	shaikarif3377@gmail.com, shaikarif@iitkgp.ac.in, 
+	shivammittal0307200@gmail.com, shivammittal0307200@iitkgp.ac.in, 
+	shobhitmishra.shobhit@gmail.com, shobhitmishra.shobhit@iitkgp.ac.in, 
+	shreyanchabra@iitkgp.ac.in, shreyanchabra@yahoo.in, 
+	shreyashnannaware00@gmail.com, SHREYASHSN@IITKGP.AC.IN, 
+	sidskole@gmail.com, sidskole@iitkgp.ac.in, simranvaidya75@gmail.com, 
+	simranvaidya75@iitkgp.ac.in, sitanshu037@gmail.com, 
+	sitanshu@iitkgp.ac.in, souradeepb1000@gmail.com, 
+	souradeepb1000@iitkgp.ac.in, suman.dutta.8877@gmail.com, 
+	SUMANDUTTA@IITKGP.AC.IN, swagatsusmoy@gmail.com, 
+	swagatsusmoy@iitkgp.ac.in, tanishkaiitkgp1999@gmail.com, 
+	taniskakashyap@iitkgp.ac.in, tanveermpund11@gmail.com, 
+	tanveermpund11@iitkgp.ac.in, vikranth.teppala@gmail.com, 
+	VIKRANTH.TEPPALA@KGPIAN.IITKGP.AC.IN, itstushar.tiwari23@gmail.com, 
+	ITSTUSHAR.TIWARI23@KGPIAN.IITKGP.AC.IN, HITESH01VADHER@IITKGP.AC.IN, 
+	HITESHVADHER099@GMAIL.COM, bairwavikas5@gmail.com, 
+	bairwavikas5@iitkgp.ac.in, nirajpanditpalmo123@gmail.com, 
+	VIVEKPALMO@IITKGP.AC.IN, yashashvi@iitkgp.ac.in, yashsri45@gmail.com
+Message-ID: <738747187.10831628662950572.JavaMail.erp@P-APP2>
+Subject: Intelligent Machines and Systems Class
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-TM-AS-GCONF: 00
+X-TM-AS-Product-Ver: IMSVA-9.1.0.2025-8.6.0.1018-26338.006
+X-TM-AS-Result: No--5.584-7.0-31-10
+X-imss-scan-details: No--5.584-7.0-31-10
+X-TM-AS-User-Approved-Sender: No
+X-TM-AS-Result-Xfilter: Match text exemption rules:No
+X-TMASE-Version: IMSVA-9.1.0.2025-8.6.1018-26338.006
+X-TMASE-Result: 10--5.584000-10.000000
+X-TMASE-MatchedRID: 1JpmMUCf1WbaeJEgycwgWPCkDKmV2gs5iFB88PweKrWpTkI0HK8zpUWQ
+	fdu4WEv6rd04BrMotsXhWj4HxSYpFcEElERnDJHCpqbreSinCdNf3ennYqHe2F71b3cyy2Bjsmc
+	+HzD5HmgBli2IalkylDyE7YqZBIwuo8WMkQWv6iXc+UkPWjTMsxXQP/3qeEFD3QfwsVk0Ubvdir
+	xFVpmK9SBT+gRpd7VYsPB239yesK6usbbOHwETKdPmWBzkCKPwYz/RJ8h44QE=
+X-TMASE-SNAP-Result: 1.821001.0001-0-1-12:0,22:0,33:0,34:0-0
+
+Dear All,
+
+Welcome to the course.
+
+Today, the first class is scheduled to start at 12 noon.
+
+However, due to a critical event of the IIC today in which I am involved, this class will be held at a later time.
+
+You all are enlisted in the MS Teams group for this course.
+Additional messages will be posted there. Please track the messages.
+
+Warm regards
+
+-CSKumar
+

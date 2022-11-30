@@ -1,0 +1,154 @@
+Delivered-To: sarvesh1604@gmail.com
+Received: by 2002:a05:6214:689:0:0:0:0 with SMTP id r9csp989241qvz;
+        Wed, 8 Sep 2021 08:46:53 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxEBnsMscVQE0rDn6rY1d6RedOU8OtM0aXWJZ7wNYFh8BcZzwuG7fOi2tTw3vDRzY/SxjVH
+X-Received: by 2002:a63:e00b:: with SMTP id e11mr4309115pgh.190.1631116013296;
+        Wed, 08 Sep 2021 08:46:53 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1631116013; cv=none;
+        d=google.com; s=arc-20160816;
+        b=TKI9UpTjk7AwTXlq4ea5qsuA9RKOXyyxierczYNuVI4W/PUxMGeZHkguO1enfTogQd
+         nNg6vDXleTgxQLJF9YvErKOaFGsFnPrOkFFemukZzgyenzFLebIsIPnsnOthPX5AqN8s
+         LYGd44e9FD8RW/AFdH4OfItVXd3aM+CuQntOtYgRwScaYHOwSFs91FNqRyUolXfvG6d8
+         PfuMiCqoQaEhBax3IJXiQ47FpSQ194we/mgrvAg2TdaCfYbNlAJsV8CLssiKgHMryNFD
+         giIVX2Dtsx++jpuFmrK4uodSWySvSK1Fx07oyTkoHfVsmRtqJRkWl9JkshLLa5XOZTXD
+         dSUA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:cc:to
+         :from:date;
+        bh=ODWeLMTaLLlpy/xn7U8f87X5YWnrtVQJkjyPZQe2zus=;
+        b=CLI9VexFhuEUjNUr6q5K1J62yDo8xtDbb7MByD3ItI45x24HW/mThipj3ha846GsKf
+         NYcWBSmlw3YsjEfm+tNFzzbfJR10eoNvK8UB1eHqbCYgPLa8bU14MkbHO2OFOfxGFyLm
+         IQIsejtIbCOEcz3V9U9gfHR8Z7LPi57x+ptVfDnHGDY5vhQF7dJEByNTo8fI7y2CcsK8
+         fFQoAlf+NVIkBZxiCmEu+QX7yXMxx9R69vjaxyGgo03Ka9OTZMsc9GetkXhCYAmW0K8c
+         fCI6VNECMykJop4CIhdCCFJZttpByiq29v9lW+r/128Y/YsFNNaiEfVV9A0+0uJdSHUz
+         E7OA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of dkpra@mech.iitkgp.ac.in designates 203.110.245.101 as permitted sender) smtp.mailfrom=dkpra@mech.iitkgp.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitkgp.ac.in
+Return-Path: <dkpra@mech.iitkgp.ac.in>
+Received: from imsvaou1.iitkgp.ac.in (imsvaou1.iitkgp.ac.in. [203.110.245.101])
+        by mx.google.com with ESMTPS id j11si1672042pfr.323.2021.09.08.08.46.52
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 08 Sep 2021 08:46:53 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dkpra@mech.iitkgp.ac.in designates 203.110.245.101 as permitted sender) client-ip=203.110.245.101;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of dkpra@mech.iitkgp.ac.in designates 203.110.245.101 as permitted sender) smtp.mailfrom=dkpra@mech.iitkgp.ac.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=iitkgp.ac.in
+Received: from imsvaou1.iitkgp.ac.in (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id 523F0DA0BC;
+	Wed,  8 Sep 2021 21:20:44 +0530 (IST)
+Received: from imsvaou1.iitkgp.ac.in (unknown [127.0.0.1])
+	by IMSVA (Postfix) with ESMTP id 20B81DA0B9;
+	Wed,  8 Sep 2021 21:20:44 +0530 (IST)
+Received: from P-APP2 (unknown [10.57.7.45])
+	by imsvaou1.iitkgp.ac.in (Postfix) with ESMTP;
+	Wed,  8 Sep 2021 21:20:44 +0530 (IST)
+Date: Wed, 8 Sep 2021 21:16:49 +0530 (IST)
+From: dkpra@mech.iitkgp.ac.in
+To: patupmpmdhampu@gmail.com, PRATHMESHMANKAR@IITKGP.AC.IN, 
+	dr.kalita.p@iitkgp.ac.in, pratyasha.k2000@gmail.com, 
+	rahulmondal1721@gmail.com, RAHULMONDAL1721@IITKGP.AC.IN, 
+	rajakhetan51@iitkgp.ac.in, rajatkhetan51@gmail.com, 
+	rajmishra@iitkgp.ac.in, rajmishraiitkgp@gmail.com, 
+	rakeshminaabd17@gmail.com, rakeshmina@iitkgp.ac.in, 
+	raushanprabhakar1999@gmail.com, raushanprabhakar@iitkgp.ac.in, 
+	rishabhgupta12344321@iitkgp.ac.in, torisgup@gmail.com, 
+	rishabhsrivastava0108@gmail.com, rishabh.srivastava@iitkgp.ac.in, 
+	rishijain848@gmail.com, rishijain848@iitkgp.ac.in, 
+	lakhmirkhobra@gmail.com, RITIK.KHOBRA1@IITKGP.AC.IN, 
+	rohitrai101@gmail.com, rohitraj99@iitkgp.ac.in, 
+	kiranmayeersss@gmail.com, kiranmayeersss@iitkgp.ac.in, 
+	pwrsachin666@gmail.com, pwrsachin666@iitkgp.ac.in, 
+	saikatmondal410@gmail.com, saikatmondal410@iitkgp.ac.in, 
+	samirk2001@iitkgp.ac.in, sk66215@gmail.com, 
+	SANAVIKRAMASIMHAREDDY@IITKGP.AC.IN, sbsana57@gmail.com, 
+	2025sandeepkumawat@gmail.com, 2025SANDEEPKUMAWAT@IITKGP.AC.IN, 
+	sandipanhaldar2k@gmail.com, sandipanhaldar2k@iitkgp.ac.in, 
+	sanketsinha03@iitkgp.ac.in, sinhaawi04@gmail.com, 
+	saqibahmedqureshi@gmail.com, saqibaq@iitkgp.ac.in, 
+	jain.sara14@gmail.com, sarajain@iitkgp.ac.in, mansis7@iitkgp.ac.in, 
+	mansisarawata7@gmail.com, sarthak123@iitkgp.ac.in, 
+	sarthak571999@gmail.com, sarvesh1604@gmail.com, 
+	sarvesh1604@iitkgp.ac.in, satyampandey135bnsd@gmail.com, 
+	satyampandey135@iitkgp.ac.in, saumyata0427@gmail.com, 
+	saumyata0427@iitkgp.ac.in, sayanidutta2345@gmail.com, 
+	SAYANIDUTTA2345@IITKGP.AC.IN, sayanlayek5@gmail.com, 
+	sayanlayek5@iitkgp.ac.in, s8bhakat@gmail.com, 
+	sayantan2015@iitkgp.ac.in, shalika1022@gmail.com, 
+	SHALIKA@IITKGP.AC.IN, shaurya039@gmail.com, shaurya@iitkgp.ac.in, 
+	shivachaudhary537@gmail.com, shivachaudhary537@iitkgp.ac.in, 
+	shivammittal0307200@gmail.com, shivammittal0307200@iitkgp.ac.in, 
+	shivam15bsw@gmail.com, shivam15bsw@iitkgp.ac.in, 
+	laadshivansh@gmail.com, laadshivansh@iitkgp.ac.in, 
+	shobhitmishra.shobhit@gmail.com, shobhitmishra.shobhit@iitkgp.ac.in, 
+	shreyanchabra@iitkgp.ac.in, shreyanchabra@yahoo.in, 
+	shreyansray123@gmail.com, SHREYANSRAY123@IITKGP.AC.IN, 
+	shreyasirc99@gmail.com, SHREYASIRC99@IITKGP.AC.IN, 
+	shreyverma.2000@gmail.com, shreyverma.2000@iitkgp.ac.in, 
+	moreshrikant1122@gmail.com, moreshrikant1122@iitkgp.ac.in, 
+	shubhamekapure@gmail.com, shubhamekapure@iitkgp.ac.in, 
+	siddhant.shevale@gmail.com, siddhant.shevale@iitkgp.ac.in, 
+	somnathm.iitkgp@gmail.com, somumgm88@iitkgp.ac.in, 
+	soumyadeep1562000@gmail.com, SOUMYADEEP15SAHA@IITKGP.AC.IN, 
+	SONUPATRA9898@IITKGP.AC.IN, soumyapatra9898@gmail.com, 
+	ayushasthana77@gmail.com, ayushasthana77@iitkgp.ac.in, 
+	sidhartha332@gmail.com, ssidhartha@iitkgp.ac.in, 
+	subhadeepdas2410@gmail.com, subhadeepdas2410@iitkgp.ac.in
+Cc: pushpendra050@gmail.com, anupamkundu83@gmail.com, anandronald@outlook.com, 
+	santoshduce@gmail.com
+Message-ID: <2092170570.2351631116009984.JavaMail.erp@P-APP2>
+Subject: Instructions for the first Test
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-TM-AS-GCONF: 00
+X-TM-AS-Product-Ver: IMSVA-9.1.0.2025-8.6.0.1018-26396.001
+X-TM-AS-Result: No--2.797-7.0-31-10
+X-imss-scan-details: No--2.797-7.0-31-10
+X-TM-AS-User-Approved-Sender: No
+X-TM-AS-Result-Xfilter: Match text exemption rules:No
+X-TMASE-Version: IMSVA-9.1.0.2025-8.6.1018-26396.001
+X-TMASE-Result: 10--2.796800-10.000000
+X-TMASE-MatchedRID: py9qPmzeLNY23AXUgL0utaam63kopwnTYcXym7amE+UuEkmPMaA1BMG7
+	vG7oQKp9t9USU7d3Zgs40wirq0mM9anL54M5CzEQbWsCUkrA4EnT2kl4i47Lu0etfYTYyR9EgTg
+	JQMpuQwY7arQ9jC9Rj23M9l5ohxPttpor8DSuIkDece0aRiX9Wo5UafLmrvaGGb9ViDxVZUi8+T
+	DHOBQya8cBHgX/RnR9WDVbZpLg3rhJI5ZUl647UAtuKBGekqUpnH7sbImOEBRsfbn1a00A5JA1Z
+	WokJBYDT7lm12xzOKmwPb6j4KNziYRUXMs90a1TmRxAGage5tjzRCE25pNeEQvstm+R+d+6aPD/
+	M7+qwB0DrztnnoiEzaRlrbvoxQC6+Tm4pAMeYAYXhFRVLSScnByFdNnda6Rv
+X-TMASE-SNAP-Result: 1.821001.0001-0-1-12:0,22:0,33:0,34:0-0
+
+Dear All,
+
+
+Instructions for the First Test to be held on 10.09.2020 at 9.00am
+1.=09Question paper containing 10 MCQ will be sent to you all through the E=
+RP mail at about 9.00 am. The test will be for a maximum period of 45 minut=
+es. You will have to send the ANSWER KEYS to the gmail account:  050pushpen=
+dra@gmail.com
+ONLY positively by 9.45am (10.09.2020). Pl. mention your name and roll numb=
+er in the =E2=80=9CSubject=E2=80=9D of email, which will help us to sort it=
+ out.=20
+2.=09Write your name and roll number at two places on the answerscript, oth=
+erwise it will not be evaluated.
+3.=09For writing the answer, you can follow any one of the following method=
+s:
+=E2=80=A2=09Write the answers directly on the question paper, scan it and m=
+ake the .pdf file. This .pdf file is to be sent to the above gmail account.=
+ On the question paper, there are two places for writing your name and roll=
+ number.
+=E2=80=A2=09On a WORD file, you can write the ANSWER KEYS. Write your name =
+and roll number. Make the .pdf file and send it to the above gmail account.
+=E2=80=A2=09On one A-4 size paper, you can write your name and roll number =
+and write the ANSWER KEYS, scan it and then make .pdf file. This .pdf file =
+can be sent to the above gmail account.
+4.=09A student is allowed to send the ANSWER KEYS only ONCE. If you send it=
+ multiple times, ONLY THE FIRST MAIL WILL BE CONSIDERED.
+5.=09No student is allowed to make a phone call/send a mail to the Professo=
+r and/or TAs
+during the period of examination. If there is any mistake in the question(s=
+), students will be getting the credit.
+
+With all the best wishes,
+
+DK Pratihar
+
